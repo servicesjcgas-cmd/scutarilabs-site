@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScutariLabs | {{TITLE}}</title>
+  <style>
+    body { font-family: monospace; background-color: #050709; color: #FFFFFF; margin: 0; line-height: 1.6; }
+    nav { padding: 20px 40px; border-bottom: 1px solid #1A2636; background: #0A0E14; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    nav a { color: #00FF9D; text-decoration: none; font-weight: bold; letter-spacing: 1.2px; font-size: 1.2rem; }
+    .nav-links a { margin-left: 20px; font-size: 1rem; color: #A0AAB5; }
+    .nav-links a:hover { color: #00FF9D; }
+    a { color: #00FF9D; text-decoration: none; }
+    
+    .blog-container { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
+    .blog-container h1 { font-size: 2.2rem; margin-bottom: 10px; color: #00FF9D; }
+    .blog-container h2 { margin-top: 40px; color: #FFFFFF; font-size: 1.5rem; border-bottom: 1px solid #1A2636; padding-bottom: 10px; }
+    .blog-container h3 { color: #A0AAB5; margin-top: 25px; }
+    .blog-container p { margin-bottom: 20px; font-size: 1.05rem; }
+    .date { color: #A0AAB5; font-style: italic; margin-bottom: 30px; display: block; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/">&larr; ScutariLabs Home</a>
+    <div class="nav-links">
+      <a href="/travelsafe.html">Travel Safe AI</a>
+      <a href="/roomclear.html">RoomClear</a>
+      <a href="/stillnet.html">Stillnet</a>
+    </div>
+  </nav>
+  
+  <div class="blog-container">
+    <h1>{{TITLE}}</h1>
+    <span class="date">{{DATE}}</span>
+    
+    {{CONTENT}}
+    
+  </div>
+</body>
+</html>

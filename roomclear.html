@@ -1,20 +1,53 @@
----
-layout: default
----
-    <div class="container">
-        <h1>RoomClear</h1>
-        <p><strong>Tactical counter-surveillance and bug-sweeping tool. 100% on-device processing.</strong></p>
-        <p>Find hidden cameras in your Airbnb or hotel in 60 seconds. RoomClear leverages your smartphone's native hardware sensors to highlight magnetic, optical, and RF anomalies associated with concealed surveillance devices.</p>
-        
-        <h3>Hardware Level Sweeps</h3>
-        <ul>
-            <li><strong>Tri-Sensor Sweep:</strong> Tap into the native magnetometer, high-contrast IR filters, and a BLE Bloom filter to cross-reference local anomalies against known IoT device signatures.</li>
-            <li><strong>Retro-Reflective Strobe:</strong> Active optical lens hunting uses high-frequency LED pulses to highlight the specific light refraction of hidden, offline camera glass.</li>
-            <li><strong>Edge ML Threat Profiler:</strong> AR bounding boxes automatically spot and highlight high-risk objects like smoke detectors, alarm clocks, and ventilation shafts.</li>
-        </ul>
-        
-        <footer>
-            <a href="/roomclear-privacy.html">RoomClear Privacy Policy</a>
-            <a href="/roomclear-terms.html">RoomClear Terms & Conditions</a>
-        </footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScutariLabs | RoomClear</title>
+  <style>
+    body { font-family: monospace; background-color: #050709; color: #FFFFFF; margin: 0; line-height: 1.6; }
+    nav { padding: 20px 40px; border-bottom: 1px solid #1A2636; background: #0A0E14; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    nav a { color: #00FF9D; text-decoration: none; font-weight: bold; letter-spacing: 1.2px; font-size: 1.2rem; }
+    .nav-links a { margin-left: 20px; font-size: 1rem; color: #A0AAB5; }
+    .nav-links a.active { color: #00FF9D; }
+    
+    .container { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
+    h1 { font-size: 2.5rem; margin-bottom: 20px; }
+    h3 { color: #00FF9D; margin-top: 40px; }
+    ul { margin-top: 20px; }
+    li { margin-bottom: 10px; }
+    
+    footer { margin-top: 60px; border-top: 1px solid #1A2636; padding-top: 30px; }
+    .btn { display: inline-block; padding: 12px 24px; background: transparent; color: #00FF9D; text-decoration: none; margin-right: 15px; margin-bottom: 15px; border-radius: 4px; font-size: 0.9rem; border: 1px solid #1A2636; text-align: center; }
+    .btn:hover { border-color: #00FF9D; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/">&larr; ScutariLabs Home</a>
+    <div class="nav-links">
+      <a href="/travelsafe.html">Travel Safe AI</a>
+      <a href="/roomclear.html" class="active">RoomClear</a>
+      <a href="/stillnet.html">Stillnet</a>
     </div>
+  </nav>
+  
+  <div class="container">
+    <h1>RoomClear</h1>
+    <p><strong>Tactical counter-surveillance and bug-sweeping tool. 100% on-device processing.</strong></p>
+    <p>Find hidden cameras in your Airbnb or hotel in 60 seconds. RoomClear leverages your smartphone's native hardware sensors to highlight magnetic, optical, and RF anomalies associated with concealed surveillance devices.</p>
+    
+    <h3>Hardware Level Sweeps</h3>
+    <ul>
+        <li><strong>Tri-Sensor Sweep:</strong> Tap into the native magnetometer, high-contrast IR filters, and a BLE Bloom filter to cross-reference local anomalies against known IoT device signatures.</li>
+        <li><strong>Retro-Reflective Strobe:</strong> Active optical lens hunting uses high-frequency LED pulses to highlight the specific light refraction of hidden, offline camera glass.</li>
+        <li><strong>Edge ML Threat Profiler:</strong> AR bounding boxes automatically spot and highlight high-risk objects like smoke detectors, alarm clocks, and ventilation shafts.</li>
+    </ul>
+    
+    <footer>
+        <a href="/roomclear-privacy.html" class="btn">RoomClear Privacy Policy</a>
+        <a href="/roomclear-terms.html" class="btn">RoomClear Terms & Conditions</a>
+    </footer>
+  </div>
+</body>
+</html>

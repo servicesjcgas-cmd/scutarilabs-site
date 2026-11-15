@@ -2,7 +2,7 @@
 layout: post
 title: "Why Cloud-Based Safety Apps Are a Privacy Nightmare"
 date: 2026-11-15
-/blog/why-cloud-based-safety-apps-privacy-nightmare/
+permalink: /blog/why-cloud-based-safety-apps-privacy-nightmare/
 ---
 
 

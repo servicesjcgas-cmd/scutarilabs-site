@@ -6,14 +6,21 @@
   <title>ScutariLabs | Travel Safe AI</title>
   <style>
     body { font-family: monospace; background-color: #050709; color: #FFFFFF; margin: 0; line-height: 1.6; }
-    nav { padding: 20px 40px; border-bottom: 1px solid #1A2636; background: #0A0E14; }
+    nav { padding: 20px 40px; border-bottom: 1px solid #1A2636; background: #0A0E14; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
     nav a { color: #00FF9D; text-decoration: none; font-weight: bold; letter-spacing: 1.2px; font-size: 1.2rem; }
+    .nav-links a { margin-left: 20px; font-size: 1rem; color: #A0AAB5; }
+    .nav-links a.active { color: #00FF9D; }
     a { color: #00FF9D; text-decoration: none; }
   </style>
 </head>
 <body>
   <nav>
     <a href="/">&larr; ScutariLabs Home</a>
+    <div class="nav-links">
+      <a href="/travelsafe.html" class="active">Travel Safe AI</a>
+      <a href="/roomclear.html">RoomClear</a>
+      <a href="/stillnet.html">Stillnet</a>
+    </div>
   </nav>
   
   <div style="padding: 40px 20px; max-width: 800px; margin: 0 auto;">

@@ -1,1 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScutariLabs | SDK Directory</title>
+  <meta name="description" content="Zero-cloud, on-device Flutter & mobile SDKs by ScutariLabs." />
+  <style>
+    :root {
+      --bg: #0a0c10;
+      --surface: #11151c;
+      --border: #1f2937;
+      --border-hover: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --live: #22c55e;
+      --dev: #f59e0b;
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
 
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.6;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* Top Nav */
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+      font-family: var(--mono);
+      font-size: 0.9rem;
+    }
+
+    .top-nav a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .top-nav a:hover { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+    }
+
+    /* Header */
+    header {
+      margin-bottom: 2.5rem;
+    }
+
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      max-width: 620px;
+      font-size: 1rem;
+    }
+
+    /* Directory List */
+    .sdk-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .sdk-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+
+    .sdk-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+
+    .sdk-card.disabled {
+      opacity: 0.65;
+      pointer-events: none;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .sdk-title {
+      font-family: var(--mono);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .badge {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      border: 1px solid currentColor;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-live { color: var(--live); }
+    .badge-dev { color: var(--dev); }
+
+    .sdk-desc {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.15rem;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-family: var(--mono);
+      font-size: 0.8rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      color: var(--muted);
+    }
+
+    .tag {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .cta {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="top-nav">
+      <a href="/">← ScutariLabs Home</a>
+      <div class="nav-links">
+        <a href="/blog.html">Blog</a>
+        <a href="/sdk/" style="color: var(--text);">SDKs</a>
+      </div>
+    </nav>
+
+    <header>
+      <div class="eyebrow">Developer Libraries // Zero-Cloud Architecture</div>
+      <h1>ScutariLabs SDK Directory</h1>
+      <p class="subtitle">
+        Drop-in, offline-first mobile SDKs built for hardware telemetry, security, and local AI execution—zero external API calls, zero recurring server dependencies.
+      </p>
+    </header>
+
+    <main class="sdk-list">
+      <!-- SDK 1: ScutariCore -->
+      <a href="/sdk/scutaricore/" class="sdk-card">
+        <div class="card-header">
+          <span class="sdk-title">ScutariCore SDK</span>
+          <span class="badge badge-live">Available</span>
+        </div>
+        <p class="sdk-desc">
+          Hardware profiling, thermal governor telemetry, and offline sensor security primitives for Flutter and Android applications. Dual-licensed for indie and commercial teams.
+        </p>
+        <div class="card-footer">
+          <div class="tags">
+            <span class="tag">Flutter / Dart</span>
+            <span class="tag">Offline-First</span>
+            <span class="tag">Dual-License</span>
+          </div>
+          <span class="cta">View Docs &amp; Pricing →</span>
+        </div>
+      </a>
+
+      <!-- Placeholder for Future SDKs (Remove 'disabled' class and set href when live) -->
+      <div class="sdk-card disabled">
+        <div class="card-header">
+          <span class="sdk-title">Upcoming Module</span>
+          <span class="badge badge-dev">In Development</span>
+        </div>
+        <p class="sdk-desc">
+          Additional on-device security, audio classification, and local network inspection SDKs currently in internal testing.
+        </p>
+        <div class="card-footer">
+          <div class="tags">
+            <span class="tag">Zero-Cloud</span>
+            <span class="tag">Mobile Security</span>
+          </div>
+          <span class="cta">Coming Soon</span>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <span>© ScutariLabs Ltd</span>
+      <a href="/">scutarilabs.com</a>
+    </footer>
+  </div>
+</body>
+</html>

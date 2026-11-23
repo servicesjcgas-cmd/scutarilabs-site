@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>scutari Core SDK | ScutariLabs</title>
+  <title>Scutari Core SDK | ScutariLabs</title>
   <meta
     name="description"
     content="Zero-cloud edge AI and RASP infrastructure for Flutter. Hardware profiling, Android ADPF thermal governing, and zero-telemetry security."
@@ -143,6 +143,19 @@
     .btn-nav:hover {
       background-color: var(--accent);
       color: var(--bg-base);
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      display: inline-block;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      transition: color 0.15s ease;
+    }
+
+    .breadcrumb:hover {
+      color: var(--accent);
     }
 
     /* Sections */
@@ -354,6 +367,12 @@
       background-color: var(--bg-base);
       color: var(--text-main);
       border-radius: 3px;
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+
+    .app-pill:hover {
+      border-color: var(--accent);
+      color: var(--accent);
     }
 
     .benchmark-slot {
@@ -506,10 +525,10 @@
     <div class="container nav-inner">
       <a href="/" class="brand">SCUTARILABS</a>
       <nav class="nav-links">
-        <a href="/sdk.html" class="active">SDK</a>
+        <a href="/sdk/" class="active">SDK</a>
         <a href="/">Apps</a>
         <a href="/blog.html">Blog</a>
-        <a href="https://github.com/servicesjcgas-cmd" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/ScutariLabs" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="#sprint" class="btn btn-nav">[ BOOK SPRINT ]</a>
       </nav>
     </div>
@@ -520,6 +539,7 @@
     <section>
       <div class="container hero-grid">
         <div>
+          <a href="/sdk/" class="breadcrumb">&larr; All SDKs</a><br />
           <div class="status-pill">
             <span class="status-dot"></span>
             v1.0 // ANDROID PRODUCTION-READY (iOS BETA)
@@ -530,7 +550,7 @@
             Zero telemetry, zero external servers, and offline cryptographic licensing.
           </p>
           <div class="cta-row">
-            <a href="https://github.com/servicesjcgas-cmd" target="_blank" rel="noopener" class="btn btn-primary">
+            <a href="https://github.com/ScutariLabs/scutari_core" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
               View Open-Core on GitHub
             </a>
             <a href="#sprint" class="btn btn-outline">
@@ -623,9 +643,9 @@
               local sensor bug-sweeping, and offline network diagnostics strictly on consumer hardware.
             </p>
             <div class="app-pills">
-              <a href="/" class="app-pill">Travel Safe AI</a>
-              <a href="/" class="app-pill">RoomClear</a>
-              <a href="/" class="app-pill">Stillnet</a>
+              <a href="/Travelsafe.html" class="app-pill">Travel Safe AI</a>
+              <a href="/roomclear.html" class="app-pill">RoomClear</a>
+              <a href="/stillnet.html" class="app-pill">Stillnet</a>
             </div>
           </div>
 
@@ -661,7 +681,7 @@
                 <li>Community GitHub issue support</li>
               </ul>
             </div>
-            <a href="https://github.com/servicesjcgas-cmd" target="_blank" rel="noopener" class="btn btn-outline">
+            <a href="https://github.com/ScutariLabs/scutari_core" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
               View on GitHub
             </a>
           </div>
@@ -743,6 +763,7 @@
       <div>SCUTARILABS // UNITED KINGDOM &middot; Zero-Cloud Privacy. Strictly On-Device.</div>
       <div class="footer-links">
         <a href="/">Home</a>
+        <a href="/sdk/">SDKs</a>
         <a href="/blog.html">Blog</a>
         <a href="mailto:support@scutarilabs.com">Contact</a>
       </div>

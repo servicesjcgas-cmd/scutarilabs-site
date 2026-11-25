@@ -3,41 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ScutariLabs | Travel Safe AI</title>
-  <style>
-    body { font-family: monospace; background-color: #050709; color: #FFFFFF; margin: 0; line-height: 1.6; }
-    nav { padding: 20px 40px; border-bottom: 1px solid #1A2636; background: #0A0E14; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-    nav a { color: #00FF9D; text-decoration: none; font-weight: bold; letter-spacing: 1.2px; font-size: 1.2rem; }
-    .nav-links a { margin-left: 20px; font-size: 1rem; color: #A0AAB5; }
-    .nav-links a.active { color: #00FF9D; }
-    a { color: #00FF9D; text-decoration: none; }
-  </style>
+  <title>Travel Safe AI | ScutariLabs</title>
+  <meta name="description" content="Offline acoustic threat detection and earbud translation for solo travelers by ScutariLabs.">
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-  <nav>
-    <a href="/">&larr; ScutariLabs Home</a>
-    <div class="nav-links">
-      <a href="/travelsafe.html" class="active">Travel Safe AI</a>
-      <a href="/roomclear.html">RoomClear</a>
-      <a href="/stillnet.html">Stillnet</a>
+  <nav class="site-nav">
+  <div class="container nav-wrapper">
+    <a href="/" class="brand-link">
+      <svg class="brand-logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      SCUTARILABS
+    </a>
+    <div class="nav-desktop">
+      <ul class="nav-links-list">
+        <li class="nav-item"><a href="/#apps">Apps</a></li>
+        <li class="nav-item"><a href="/sdk/">SDKs</a></li>
+        <li class="nav-item"><a href="/#architecture">Architecture</a></li>
+        <li class="nav-item"><a href="/blog.html">Blog</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="mailto:support@scutarilabs.com?subject=Commercial%20Licensing%20Inquiry" class="btn btn-primary btn-sm">Commercial Licensing</a>
+      </div>
     </div>
-  </nav>
-  
-  <div style="padding: 40px 20px; max-width: 800px; margin: 0 auto;">
-    <h1>Travel Safe AI</h1>
-    <p><strong>Your Personal Safety Net. Offline. Private. Always On.</strong></p>
-    <p>Most safety apps trade your privacy for protection, constantly streaming your location and ambient audio to corporate cloud servers. Travel Safe AI flips the script. Using advanced on-device audio classification, your phone acts as an independent guardian.</p>
-    
-    <h2>Core Architecture</h2>
-    <ul>
-        <li><strong>Zero Cloud Tracking:</strong> Your location and audio data never touch an external server. Everything stays securely sandboxed on your physical device.</li>
-        <li><strong>100% Offline Capable:</strong> No signal? No problem. Core safety triggers and acoustic monitoring run entirely via Edge AI without needing cellular data.</li>
-        <li><strong>Stealth Routing:</strong> Dynamic audio-to-haptic switching whispers alerts into your Bluetooth earbuds, or uses silent vibration patterns if none are connected.</li>
-    </ul>
-    
-    <br>
-    <a href="/travelsafe-privacy.html">TSAI Privacy Policy</a> &nbsp;|&nbsp; 
-    <a href="/travelsafe-terms.html">TSAI Terms & Conditions</a>
   </div>
+</nav>
+
+  <main class="container" style="padding-top: 60px; padding-bottom: 80px; max-width: 860px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 24px;">
+      <div>
+        <span class="section-eyebrow">PERSONAL SAFETY NET // OFFLINE GUARDIAN</span>
+        <h1>Travel Safe AI</h1>
+      </div>
+      <span class="badge badge-live"><span class="badge-pulse"></span> Live on Android</span>
+    </div>
+
+    <p class="lead" style="margin-bottom: 24px;"><strong>Your Personal Safety Net. Offline. Private. Always On.</strong></p>
+    <p style="margin-bottom: 32px;">
+      Most safety apps trade your privacy for protection, constantly streaming your location and ambient audio to corporate cloud servers. Travel Safe AI flips the script. Using advanced on-device audio classification, your phone acts as an independent guardian.
+    </p>
+
+    <div class="card-actions" style="margin-bottom: 40px; flex-direction: row;">
+      <a href="<!-- TODO: Insert Google Play Store URL -->" class="btn btn-playstore">
+        <svg class="btn-playstore-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.55.45-1 1-1 .2 0 .38.07.53.18l12.43 8.32a.98.98 0 0 1 0 1.64L4.53 20.97c-.15.11-.33.18-.53.18-.55 0-1-.45-1-1z"/></svg>
+        <div>
+          <span class="btn-playstore-text-sub">GET IT ON</span>
+          <span class="btn-playstore-text-main">Google Play</span>
+        </div>
+      </a>
+    </div>
+
+    <h2 style="margin-bottom: 16px;">Core Architecture</h2>
+    <ul class="licensing-list" style="margin-bottom: 40px;">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Zero Cloud Tracking:</strong> Your location and audio data never touch an external server. Everything stays securely sandboxed on your physical device.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>100% Offline Capable:</strong> No signal? No problem. Core safety triggers and acoustic monitoring run entirely via Edge AI without needing cellular data.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Stealth Routing:</strong> Dynamic audio-to-haptic switching whispers alerts into your Bluetooth earbuds, or uses silent vibration patterns if none are connected.</span></li>
+    </ul>
+
+    <div style="padding-top: 24px; border-top: 1px solid var(--border); display: flex; gap: 16px;">
+      <a href="/travelsafe-privacy.html" class="btn btn-outline btn-sm">TSAI Privacy Policy</a>
+      <a href="/travelsafe-terms.html" class="btn btn-outline btn-sm">TSAI Terms & Conditions</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h4>SCUTARILABS LTD</h4>
+        <p>Zero-cloud, strictly on-device mobile security and counter-surveillance tools for high-risk operators and enterprise teams.</p>
+        <p style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent);">
+          Registered in England & Wales <!-- TODO: Insert Companies House Number -->
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Consumer Apps</h5>
+        <ul class="footer-links-list">
+          <li><a href="/travelsafe.html">Travel Safe AI</a></li>
+          <li><a href="/roomclear.html">RoomClear</a></li>
+          <li><a href="/stillnet.html">Stillnet</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Developer SDKs</h5>
+        <ul class="footer-links-list">
+          <li><a href="/sdk/">SDK Directory</a></li>
+          <li><a href="/sdk/scutaricore/">ScutariCore SDK</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company & Legal</h5>
+        <ul class="footer-links-list">
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/contact.html">Contact & Support</a></li>
+          <li><a href="/travelsafe-privacy.html">Privacy Policy</a></li>
+          <li><a href="/travelsafe-terms.html">Terms & Compliance</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 ScutariLabs Ltd. All rights reserved. Zero external tracking scripts.</div>
+      <div>Direct Contact: <a href="mailto:support@scutarilabs.com" style="color: var(--accent);">support@scutarilabs.com</a></div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

@@ -1,50 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stillnet | ScutariLabs</title>
-    <style>
-        body { font-family: monospace; background-color: #050709; color: #FFFFFF; margin: 0; line-height: 1.6; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 1px solid #1A2636; background: #0A0E14; flex-wrap: wrap; gap: 15px;}
-        nav .brand { color: #00FF9D; text-decoration: none; font-weight: bold; }
-        nav .links a { color: #A0AAB5; text-decoration: none; margin-left: 20px; }
-        nav .links a:hover { color: #00FF9D; }
-        .container { max-width: 800px; margin: 40px auto; padding: 20px; }
-        h1 { color: #FFFFFF; font-size: 2.2rem; border-bottom: 1px solid #1A2636; padding-bottom: 10px;}
-        h3 { color: #00FF9D; margin-top: 30px; }
-        p, li { color: #A0AAB5; }
-        ul { padding-left: 20px; }
-        footer { margin-top: 50px; border-top: 1px solid #1A2636; padding-top: 20px; display: flex; gap: 20px; flex-wrap: wrap; }
-        footer a { color: #00FF9D; text-decoration: none; font-size: 0.9em; border: 1px solid #1A2636; padding: 8px 16px; border-radius: 4px; }
-        footer a:hover { background: #1A2636; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stillnet | ScutariLabs</title>
+  <meta name="description" content="100% offline local network vulnerability scanner and active threat countermeasure utility by ScutariLabs.">
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <nav>
-        <a href="/" class="brand">&larr; ScutariLabs Home</a>
-        <div class="links">
-            <a href="/travelsafe.html">Travel Safe AI</a>
-            <a href="/roomclear.html">RoomClear</a>
-            <a href="/stillnet.html" style="color: #00FF9D;">Stillnet</a>
-        </div>
-    </nav>
-    <div class="container">
-        <h1>Stillnet</h1>
-        <p><strong>Your Local Network Vanguard. 100% Offline. Air-Gapped.</strong></p>
-        <p>Stillnet is a local network vulnerability scanner and active threat countermeasure utility. Designed for absolute privacy, it scans for malicious or vulnerable networks and allows you to deploy legally compliant countermeasures without harvesting your data or serving ads.</p>
-        
-        <h3>Core Architecture</h3>
-        <ul>
-            <li><strong>Local Network Topology:</strong> Rapidly map connected devices and assess local subnets entirely on your device.</li>
-            <li><strong>Offline Vulnerability Engine:</strong> Cross-reference discovered nodes against an air-gapped threat database to identify malicious intent without relying on cloud processing.</li>
-            <li><strong>Active Countermeasures:</strong> Deploy native security responses to shield your device from identified rogue networks or aggressive tracking.</li>
-        </ul>
-        
-        <footer>
-            <a href="/stillnet-privacy.html">Stillnet Privacy Policy</a>
-            <a href="/stillnet-terms.html">Stillnet Terms of Service</a>
-        </footer>
+  <nav class="site-nav">
+  <div class="container nav-wrapper">
+    <a href="/" class="brand-link">
+      <svg class="brand-logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      SCUTARILABS
+    </a>
+    <div class="nav-desktop">
+      <ul class="nav-links-list">
+        <li class="nav-item"><a href="/#apps">Apps</a></li>
+        <li class="nav-item"><a href="/sdk/">SDKs</a></li>
+        <li class="nav-item"><a href="/#architecture">Architecture</a></li>
+        <li class="nav-item"><a href="/blog.html">Blog</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="mailto:support@scutarilabs.com?subject=Commercial%20Licensing%20Inquiry" class="btn btn-primary btn-sm">Commercial Licensing</a>
+      </div>
     </div>
+  </div>
+</nav>
+
+  <main class="container" style="padding-top: 60px; padding-bottom: 80px; max-width: 860px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 24px;">
+      <div>
+        <span class="section-eyebrow">NETWORK DIAGNOSTICS // AIR-GAPPED VANGUARD</span>
+        <h1>Stillnet</h1>
+      </div>
+      <span class="badge badge-dev"><span class="badge-pulse"></span> In Development</span>
+    </div>
+
+    <p class="lead" style="margin-bottom: 24px;"><strong>Your Local Network Vanguard. 100% Offline. Air-Gapped.</strong></p>
+    <p style="margin-bottom: 32px;">
+      Stillnet is a local network vulnerability scanner and active threat countermeasure utility. Designed for absolute privacy, it scans for malicious or vulnerable networks and allows you to deploy legally compliant countermeasures without harvesting your data or serving ads.
+    </p>
+
+    <h2 style="margin-bottom: 16px;">Core Architecture</h2>
+    <ul class="licensing-list" style="margin-bottom: 40px;">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Local Network Topology:</strong> Rapidly map connected devices and assess local subnets entirely on your device.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Offline Vulnerability Engine:</strong> Cross-reference discovered nodes against an air-gapped threat database to identify malicious intent without relying on cloud processing.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Active Countermeasures:</strong> Deploy native security responses to shield your device from identified rogue networks or aggressive tracking.</span></li>
+    </ul>
+
+    <div style="padding-top: 24px; border-top: 1px solid var(--border); display: flex; gap: 16px;">
+      <a href="/stillnet-privacy.html" class="btn btn-outline btn-sm">Stillnet Privacy Policy</a>
+      <a href="/stillnet-terms.html" class="btn btn-outline btn-sm">Stillnet Terms of Service</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h4>SCUTARILABS LTD</h4>
+        <p>Zero-cloud, strictly on-device mobile security and counter-surveillance tools for high-risk operators and enterprise teams.</p>
+        <p style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent);">
+          Registered in England & Wales <!-- TODO: Insert Companies House Number -->
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Consumer Apps</h5>
+        <ul class="footer-links-list">
+          <li><a href="/travelsafe.html">Travel Safe AI</a></li>
+          <li><a href="/roomclear.html">RoomClear</a></li>
+          <li><a href="/stillnet.html">Stillnet</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Developer SDKs</h5>
+        <ul class="footer-links-list">
+          <li><a href="/sdk/">SDK Directory</a></li>
+          <li><a href="/sdk/scutaricore/">ScutariCore SDK</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company & Legal</h5>
+        <ul class="footer-links-list">
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/contact.html">Contact & Support</a></li>
+          <li><a href="/travelsafe-privacy.html">Privacy Policy</a></li>
+          <li><a href="/travelsafe-terms.html">Terms & Compliance</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 ScutariLabs Ltd. All rights reserved. Zero external tracking scripts.</div>
+      <div>Direct Contact: <a href="mailto:support@scutarilabs.com" style="color: var(--accent);">support@scutarilabs.com</a></div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

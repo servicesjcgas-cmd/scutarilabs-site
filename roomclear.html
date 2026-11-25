@@ -3,51 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ScutariLabs | RoomClear</title>
-  <style>
-    body { font-family: monospace; background-color: #050709; color: #FFFFFF; margin: 0; line-height: 1.6; }
-    nav { padding: 20px 40px; border-bottom: 1px solid #1A2636; background: #0A0E14; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-    nav a { color: #00FF9D; text-decoration: none; font-weight: bold; letter-spacing: 1.2px; font-size: 1.2rem; }
-    .nav-links a { margin-left: 20px; font-size: 1rem; color: #A0AAB5; }
-    .nav-links a.active { color: #00FF9D; }
-    
-    .container { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
-    h1 { font-size: 2.5rem; margin-bottom: 20px; }
-    h3 { color: #00FF9D; margin-top: 40px; }
-    ul { margin-top: 20px; }
-    li { margin-bottom: 10px; }
-    
-    footer { margin-top: 60px; border-top: 1px solid #1A2636; padding-top: 30px; }
-    .btn { display: inline-block; padding: 12px 24px; background: transparent; color: #00FF9D; text-decoration: none; margin-right: 15px; margin-bottom: 15px; border-radius: 4px; font-size: 0.9rem; border: 1px solid #1A2636; text-align: center; }
-    .btn:hover { border-color: #00FF9D; }
-  </style>
+  <title>RoomClear | ScutariLabs</title>
+  <meta name="description" content="Tactical bug-sweeping and hidden camera detection using local hardware sensors by ScutariLabs.">
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-  <nav>
-    <a href="/">&larr; ScutariLabs Home</a>
-    <div class="nav-links">
-      <a href="/travelsafe.html">Travel Safe AI</a>
-      <a href="/roomclear.html" class="active">RoomClear</a>
-      <a href="/stillnet.html">Stillnet</a>
+  <nav class="site-nav">
+  <div class="container nav-wrapper">
+    <a href="/" class="brand-link">
+      <svg class="brand-logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      SCUTARILABS
+    </a>
+    <div class="nav-desktop">
+      <ul class="nav-links-list">
+        <li class="nav-item"><a href="/#apps">Apps</a></li>
+        <li class="nav-item"><a href="/sdk/">SDKs</a></li>
+        <li class="nav-item"><a href="/#architecture">Architecture</a></li>
+        <li class="nav-item"><a href="/blog.html">Blog</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="mailto:support@scutarilabs.com?subject=Commercial%20Licensing%20Inquiry" class="btn btn-primary btn-sm">Commercial Licensing</a>
+      </div>
     </div>
-  </nav>
-  
-  <div class="container">
-    <h1>RoomClear</h1>
-    <p><strong>Tactical counter-surveillance and bug-sweeping tool. 100% on-device processing.</strong></p>
-    <p>Find hidden cameras in your Airbnb or hotel in 60 seconds. RoomClear leverages your smartphone's native hardware sensors to highlight magnetic, optical, and RF anomalies associated with concealed surveillance devices.</p>
-    
-    <h3>Hardware Level Sweeps</h3>
-    <ul>
-        <li><strong>Tri-Sensor Sweep:</strong> Tap into the native magnetometer, high-contrast IR filters, and a BLE Bloom filter to cross-reference local anomalies against known IoT device signatures.</li>
-        <li><strong>Retro-Reflective Strobe:</strong> Active optical lens hunting uses high-frequency LED pulses to highlight the specific light refraction of hidden, offline camera glass.</li>
-        <li><strong>Edge ML Threat Profiler:</strong> AR bounding boxes automatically spot and highlight high-risk objects like smoke detectors, alarm clocks, and ventilation shafts.</li>
-    </ul>
-    
-    <footer>
-        <a href="/roomclear-privacy.html" class="btn">RoomClear Privacy Policy</a>
-        <a href="/roomclear-terms.html" class="btn">RoomClear Terms & Conditions</a>
-    </footer>
   </div>
+</nav>
+
+  <main class="container" style="padding-top: 60px; padding-bottom: 80px; max-width: 860px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 24px;">
+      <div>
+        <span class="section-eyebrow">COUNTER-SURVEILLANCE // TACTICAL SWEEP</span>
+        <h1>RoomClear</h1>
+      </div>
+      <span class="badge badge-beta"><span class="badge-pulse"></span> Closed Beta</span>
+    </div>
+
+    <p class="lead" style="margin-bottom: 24px;"><strong>Tactical counter-surveillance and bug-sweeping tool. 100% on-device processing.</strong></p>
+    <p style="margin-bottom: 32px;">
+      Find hidden cameras in your Airbnb or hotel in 60 seconds. RoomClear leverages your smartphone&#39;s native hardware sensors to highlight magnetic, optical, and RF anomalies associated with concealed surveillance devices.
+    </p>
+
+    <h2 style="margin-bottom: 16px;">Hardware Level Sweeps</h2>
+    <ul class="licensing-list" style="margin-bottom: 40px;">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Tri-Sensor Sweep:</strong> Tap into the native magnetometer, high-contrast IR filters, and a BLE Bloom filter to cross-reference local anomalies against known IoT device signatures.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Retro-Reflective Strobe:</strong> Active optical lens hunting uses high-frequency LED pulses to highlight the specific light refraction of hidden, offline camera glass.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Edge ML Threat Profiler:</strong> AR bounding boxes automatically spot and highlight high-risk objects like smoke detectors, alarm clocks, and ventilation shafts.</span></li>
+    </ul>
+
+    <div style="padding-top: 24px; border-top: 1px solid var(--border); display: flex; gap: 16px;">
+      <a href="/roomclear-privacy.html" class="btn btn-outline btn-sm">RoomClear Privacy Policy</a>
+      <a href="/roomclear-terms.html" class="btn btn-outline btn-sm">RoomClear Terms & Conditions</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h4>SCUTARILABS LTD</h4>
+        <p>Zero-cloud, strictly on-device mobile security and counter-surveillance tools for high-risk operators and enterprise teams.</p>
+        <p style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent);">
+          Registered in England & Wales <!-- TODO: Insert Companies House Number -->
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Consumer Apps</h5>
+        <ul class="footer-links-list">
+          <li><a href="/travelsafe.html">Travel Safe AI</a></li>
+          <li><a href="/roomclear.html">RoomClear</a></li>
+          <li><a href="/stillnet.html">Stillnet</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Developer SDKs</h5>
+        <ul class="footer-links-list">
+          <li><a href="/sdk/">SDK Directory</a></li>
+          <li><a href="/sdk/scutaricore/">ScutariCore SDK</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company & Legal</h5>
+        <ul class="footer-links-list">
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/contact.html">Contact & Support</a></li>
+          <li><a href="/travelsafe-privacy.html">Privacy Policy</a></li>
+          <li><a href="/travelsafe-terms.html">Terms & Compliance</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 ScutariLabs Ltd. All rights reserved. Zero external tracking scripts.</div>
+      <div>Direct Contact: <a href="mailto:support@scutarilabs.com" style="color: var(--accent);">support@scutarilabs.com</a></div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

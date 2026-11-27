@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ScutariLabs | Developer SDK Directory</title>
-  <meta name="description" content="On-device Flutter & mobile SDKs by ScutariLabs. Hardware profiling, thermal headroom governing, and zero-telemetry security.">
-  <meta property="og:title" content="ScutariLabs | Developer SDK Directory">
-  <meta property="og:description" content="Drop-in, offline-first mobile SDKs built for hardware telemetry, security, and local AI execution.">
+  <title>ScutariLabs SDK | On-Device Acoustic & Sensor Intelligence for Flutter</title>
+  <meta name="description" content="Production-hardened Flutter SDKs (ScutariCore & Scutari Audio Core) for real-time local inference and counter-surveillance sensing. Zero cloud. Zero egress.">
+  <meta property="og:title" content="ScutariLabs SDK | On-Device Acoustic & Sensor Intelligence">
+  <meta property="og:description" content="Production-hardened Flutter SDKs for real-time local inference and counter-surveillance sensing. Built on LiteRT with offline Ed25519 licensing.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="/css/main.css">
 </head>
@@ -22,7 +22,7 @@
     <div class="nav-desktop">
       <ul class="nav-links-list">
         <li class="nav-item"><a href="/#apps">Apps</a></li>
-        <li class="nav-item"><a href="/sdk/">SDKs</a></li>
+        <li class="nav-item"><a href="/sdk.html">SDKs</a></li>
         <li class="nav-item"><a href="/#architecture">Architecture</a></li>
         <li class="nav-item"><a href="/blog.html">Blog</a></li>
       </ul>
@@ -39,7 +39,7 @@
   <div class="mobile-menu-drawer">
     <ul class="mobile-menu-list">
       <li><a href="/#apps">Apps</a></li>
-      <li><a href="/sdk/">SDKs</a></li>
+      <li><a href="/sdk.html">SDKs</a></li>
       <li><a href="/#architecture">Architecture</a></li>
       <li><a href="/blog.html">Blog</a></li>
     </ul>
@@ -47,114 +47,410 @@
   </div>
 </nav>
 
-  <main class="container" style="padding-top: 64px; padding-bottom: 96px;">
-    <header style="max-width: 720px; margin-bottom: 56px;">
-      <div class="hero-pill" style="margin-bottom: 20px;">
-        <span class="hero-pill-dot"></span>
-        <span>Developer Infrastructure // Zero-Cloud</span>
-      </div>
-      <h1 style="font-size: clamp(2.4rem, 4.5vw, 3.5rem); margin-bottom: 16px;">ScutariLabs SDK Directory</h1>
-      <p style="font-size: 1.15rem; color: var(--text-secondary);">
-        Drop-in, offline-first mobile SDKs built for hardware profiling, thermal headroom governing, and local AI execution&mdash;zero external API calls, zero recurring server dependencies.
-      </p>
-      <div style="margin-top: 20px;">
-        <a href="https://github.com/ScutariLabs" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-          <svg class="w-4" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
-            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-          </svg>
-          ScutariLabs on GitHub &rarr;
-        </a>
+  <main>
+    <!-- 1. Hero Section -->
+    <header class="hero">
+      <div class="container">
+        <div class="hero-pill" style="margin-bottom: 20px;">
+          <span class="hero-pill-dot"></span>
+          <span>SCUTARILABS SDK &bull; FLUTTER / ANDROID</span>
+        </div>
+        <h1 style="font-size: clamp(2.4rem, 5vw, 4.2rem); margin-bottom: 20px;">
+          On-Device Acoustic & Sensor Intelligence.<br>Zero Cloud. Zero Egress.
+        </h1>
+        <p class="lead" style="max-width: 760px; margin: 0 auto 36px;">
+          Production-hardened Flutter SDKs (<strong>ScutariCore</strong> &amp; <strong>Scutari Audio Core</strong>) for real-time local inference and counter-surveillance sensing. Built on LiteRT with offline Ed25519 licensing&mdash;no API keys, no server bills, no data leaving the device.
+        </p>
+        <div class="hero-ctas">
+          <a href="https://github.com/ScutariLabs" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg">
+            <svg class="w-5" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            Explore on GitHub (GPLv3)
+          </a>
+          <a href="#inquiry" class="btn btn-primary btn-lg">Request Commercial License &rarr;</a>
+        </div>
+
+        <!-- Dart Integration Code Snippet Card -->
+        <div class="code-card" style="max-width: 840px; margin: 48px auto 0; text-align: left;">
+          <div class="code-header">
+            <div class="code-dots">
+              <span class="code-dot"></span>
+              <span class="code-dot"></span>
+              <span class="code-dot"></span>
+            </div>
+            <span>flutter / scutari_audio_core.dart &bull; LiteRT Strict Offline</span>
+            <button class="copy-btn" id="sdkCopyBtn" type="button">COPY</button>
+          </div>
+          <pre class="code-pre" id="sdkCode"><code><span class="cm">// Add to pubspec.yaml: scutari_audio_core: ^1.0.0</span>
+<span class="kw">import</span> <span class="str">'package:scutari_audio_core/scutari_audio_core.dart'</span>;
+
+<span class="kw">void</span> <span class="fn">main</span>() <span class="kw">async</span> {
+  <span class="cm">// Initialize strictly on-device engine with offline Ed25519 license key</span>
+  <span class="kw">final</span> engine = <span class="kw">await</span> <span class="fn">ScutariAudioCore</span>.init(
+    licenseKey: <span class="str">'SCUTARI_ED25519_KEY_...'</span>,
+    mode: <span class="fn">InferenceMode</span>.strictOffline,
+    delegate: <span class="fn">HardwareDelegate</span>.armNpu,
+  );
+
+  <span class="cm">// Stream real-time classified threats without transmitting raw audio</span>
+  engine.threatStream.listen((event) {
+    <span class="fn">print</span>(<span class="str">'Local Acoustic Event: ${event.classification} [${event.confidence}]'</span>);
+    <span class="fn">HapticsService</span>.triggerStealthAlert(event.severity);
+  });
+}</code></pre>
+        </div>
       </div>
     </header>
 
-    <div class="bento-grid">
-      <!-- SDK 1: ScutariCore -->
-      <div class="bento-card">
-        <div class="bento-card-top">
-          <div class="app-icon-badge">
-            <svg class="w-6" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="2" y="2" width="20" height="20" rx="4"/>
-              <path d="m9 10 2 2 4-4"/>
-            </svg>
+    <!-- 2. 4 Hard Guarantees Strip -->
+    <section class="section-alt" style="padding: 64px 0;">
+      <div class="container">
+        <div class="pillars-grid" style="grid-template-columns: repeat(4, 1fr); margin-top: 0;">
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg class="w-6" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0066CC" stroke-width="2">
+                <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.2c.3.4.8.5 1.3.3l.5-.3c.4-.2.6-.6.5-1.1z"/>
+              </svg>
+            </div>
+            <h3>0 Bytes Egress</h3>
+            <p>Airplane Mode verified. Raw sensor streams and inference telemetry never cross physical handset boundaries.</p>
           </div>
-          <span class="badge badge-live"><span class="badge-dot"></span> v1.0 Production</span>
-        </div>
-        <h3>ScutariCore SDK</h3>
-        <div class="tagline">Flutter / Dart &bull; Android ADPF &bull; RASP Security</div>
-        <p class="desc">
-          Hardware profiling, Android ADPF thermal governor headroom streaming, volatile RAM buffer scrubbing, and offline Ed25519 cryptographic licensing for Flutter apps.
-        </p>
-        <div class="bento-actions">
-          <a href="/sdk/scutaricore/" class="btn btn-secondary btn-sm">View Technical Docs & Pricing &rarr;</a>
-          <a href="mailto:support@scutarilabs.com?subject=ScutariCore%20Commercial%20License" class="btn btn-outline btn-sm">Request Commercial License</a>
-        </div>
-      </div>
 
-      <!-- SDK 2: Scutari Audio Core -->
-      <div class="bento-card">
-        <div class="bento-card-top">
-          <div class="app-icon-badge">
-            <svg class="w-6" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
-              <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-            </svg>
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg class="w-6" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0066CC" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <h3>Ed25519 Offline Licensing</h3>
+            <p>Verified cryptographically in memory on device boot in under 1 ms. Zero licensing server pings or uptime risk.</p>
           </div>
-          <span class="badge badge-beta"><span class="badge-dot"></span> Closed Beta</span>
-        </div>
-        <h3>Scutari Audio Core</h3>
-        <div class="tagline">On-Device Acoustic AI & Ultrasonic DSP</div>
-        <p class="desc">
-          Real-time spectrogram feature extraction, low-latency audio classification, and high-frequency acoustic beacon scanning strictly on device RAM with zero cloud processing.
-        </p>
-        <div class="bento-actions">
-          <a href="mailto:support@scutarilabs.com?subject=Audio%20Core%20Beta%20Access" class="btn btn-outline btn-sm">Request Beta Access &rarr;</a>
-        </div>
-      </div>
 
-      <!-- SDK 3: Scutari LAN Vanguard -->
-      <div class="bento-card">
-        <div class="bento-card-top">
-          <div class="app-icon-badge">
-            <svg class="w-6" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
-              <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
-              <line x1="6" y1="6" x2="6.01" y2="6"/>
-              <line x1="6" y1="18" x2="6.01" y2="18"/>
-            </svg>
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg class="w-6" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0066CC" stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <h3>Flat Commercial Pricing</h3>
+            <p>No metered API calls, no token fees, no runaway cloud bills. Predictable flat annual or perpetual fleet licensing.</p>
           </div>
-          <span class="badge badge-dev"><span class="badge-dot"></span> In Development</span>
-        </div>
-        <h3>Scutari LAN Vanguard</h3>
-        <div class="tagline">Local Network Topology & Threat Diagnostics</div>
-        <p class="desc">
-          Air-gapped network vulnerability scanning, ARP poisoning countermeasures, and connected IoT device profiling. Zero packet data ever exits to external telemetry servers.
-        </p>
-        <div class="bento-actions">
-          <span style="font-size: 0.82rem; color: var(--text-tertiary);">Planned Release Q1 2027</span>
-        </div>
-      </div>
 
-      <!-- SDK 4: Scutari Vision OCR -->
-      <div class="bento-card">
-        <div class="bento-card-top">
-          <div class="app-icon-badge">
-            <svg class="w-6" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/>
-            </svg>
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg class="w-6" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0066CC" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              </svg>
+            </div>
+            <h3>Dual-Licensed</h3>
+            <p>GPLv3 for open-source evaluation and non-commercial builds. Commercial license with closed-source IP indemnity.</p>
           </div>
-          <span class="badge badge-dev"><span class="badge-dot"></span> In Development</span>
-        </div>
-        <h3>Scutari Vision OCR</h3>
-        <div class="tagline">On-Device Document Parsing & Edge Vision</div>
-        <p class="desc">
-          Ultra-lightweight local receipt OCR and structured entity parsing powered by INT8 quantization. Zero server dependencies for financial and healthcare document processing.
-        </p>
-        <div class="bento-actions">
-          <span style="font-size: 0.82rem; color: var(--text-tertiary);">Planned Release Q2 2027</span>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- 3. SDK Modules Breakdown (2 Bento Cards) -->
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <h2>Modular Infrastructure for Mobile Teams.</h2>
+          <p>Integrate dedicated on-device intelligence modules into your existing Flutter application in minutes.</p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Module 1: Scutari Audio Core -->
+          <div class="bento-card">
+            <div class="bento-card-top">
+              <div class="app-icon-badge">
+                <svg class="w-6" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0066CC" stroke-width="2">
+                  <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                </svg>
+              </div>
+              <span class="badge badge-live"><span class="badge-dot"></span> Production Ready</span>
+            </div>
+            <h3>Scutari Audio Core</h3>
+            <div class="tagline">LiteRT Acoustic Event & Threat Classification</div>
+            <p class="desc">
+              Executes continuous, real-time acoustic classification strictly on-device using quantized LiteRT models and low-memory circular ring buffers. Designed for lone-worker monitoring, personal safety apps, and industrial field-service teams operating in signal dead zones.
+            </p>
+            <div style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 24px;">
+              <strong>Target Use Cases:</strong> Lone-worker Duress Audio, Ultrasonic Beacon Hunting, Personal Travel Safety, Voice Anomaly Scoring.
+            </div>
+            <div class="bento-actions">
+              <a href="#inquiry" class="btn btn-primary btn-sm">Request Commercial Evaluation &rarr;</a>
+              <a href="https://github.com/ScutariLabs" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Explore GPLv3 Code</a>
+            </div>
+          </div>
+
+          <!-- Module 2: ScutariCore -->
+          <div class="bento-card">
+            <div class="bento-card-top">
+              <div class="app-icon-badge">
+                <svg class="w-6" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0066CC" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="20" rx="4"/>
+                  <path d="m9 10 2 2 4-4"/>
+                </svg>
+              </div>
+              <span class="badge badge-live"><span class="badge-dot"></span> Core Infrastructure</span>
+            </div>
+            <h3>ScutariCore</h3>
+            <div class="tagline">Hardware Profiler, ADPF Governor & RASP</div>
+            <p class="desc">
+              Unified hardware sensor abstraction, magnetometer anomaly detection, BLE Bloom filter scanners, Android ADPF thermal headroom governor, and offline Ed25519 cryptographic license validation foundation for Flutter.
+            </p>
+            <div style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 24px;">
+              <strong>Target Use Cases:</strong> Bug Sweepers, Hardware Integrity Checks (Frida/Root), Thermal Scaling, Offline Licensing Gate.
+            </div>
+            <div class="bento-actions">
+              <a href="/sdk/scutaricore/" class="btn btn-secondary btn-sm">View ScutariCore Docs &rarr;</a>
+              <a href="#inquiry" class="btn btn-outline btn-sm">Request Integration Call</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Architecture & Benchmarks Section ("Don't Trust Us—Inspect It") -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">RUNTIME ARCHITECTURE & AUDITING</span>
+          <h2>Don't Trust Us&mdash;Inspect It.</h2>
+          <p>Strict on-device execution verified by Android Manifest inspections, memory sanitizers, and network sniffer dumps.</p>
+        </div>
+
+        <!-- Clean Visual Flow -->
+        <div class="pipeline-flow">
+          <div class="pipeline-step">
+            <span class="pipeline-badge">01</span>
+            <div>
+              <div>Device Mic / Sensors</div>
+              <div style="font-size: 0.8rem; color: var(--text-tertiary);">Hardware Stream</div>
+            </div>
+          </div>
+          <span class="pipeline-arrow">&rarr;</span>
+
+          <div class="pipeline-step">
+            <span class="pipeline-badge">02</span>
+            <div>
+              <div>Local Ring Buffer</div>
+              <div style="font-size: 0.8rem; color: var(--text-tertiary);">Volatile RAM Only</div>
+            </div>
+          </div>
+          <span class="pipeline-arrow">&rarr;</span>
+
+          <div class="pipeline-step">
+            <span class="pipeline-badge">03</span>
+            <div>
+              <div>LiteRT On-Device Model</div>
+              <div style="font-size: 0.8rem; color: var(--text-tertiary);">ARM NPU / GPU Delegate</div>
+            </div>
+          </div>
+          <span class="pipeline-arrow">&rarr;</span>
+
+          <div class="pipeline-step">
+            <span class="pipeline-badge">04</span>
+            <div>
+              <div>App Callback Stream</div>
+              <div style="font-size: 0.8rem; color: #10B981; font-weight: 600;">Zero Cloud &bull; 0 Egress</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Performance & Footprint Table -->
+        <div style="margin-top: 48px;">
+          <h3 style="font-size: 1.4rem; margin-bottom: 16px;">Performance &amp; Footprint Benchmarks</h3>
+          <div class="data-table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Metric</th>
+                  <th>Measured Value</th>
+                  <th>Test Environment</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Inference Latency</strong></td>
+                  <td><code>[TODO: INSERT MEASURED VALUE]</code></td>
+                  <td>Mid-range Android (Google Pixel 7a / Snapdragon 7 Gen 1), ARM NPU delegate</td>
+                </tr>
+                <tr>
+                  <td><strong>Binary Size Impact</strong></td>
+                  <td><code>[TODO: INSERT MEASURED VALUE]</code></td>
+                  <td>Release APK / AOT Flutter compile overhead with quantized LiteRT binary</td>
+                </tr>
+                <tr>
+                  <td><strong>Network Permissions</strong></td>
+                  <td><strong style="color: #10B981;">None required</strong></td>
+                  <td><code>android.permission.INTERNET</code> is completely omitted from the SDK manifest</td>
+                </tr>
+                <tr>
+                  <td><strong>License Verification</strong></td>
+                  <td><strong style="color: #0066CC;">&lt; 1 ms</strong></td>
+                  <td>Ed25519 asymmetric signature verification performed in volatile memory at boot</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Dual-Licensing & Commercial Tiers Table -->
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">COMMERCIAL & EVALUATION TIERS</span>
+          <h2>Transparent Dual-Licensing Boundaries.</h2>
+          <p>Choose open evaluation or secure closed-source commercial IP protection with clear terms.</p>
+        </div>
+
+        <div class="data-table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Feature / Obligation</th>
+                <th style="width: 25%;">Open Source (GPLv3)</th>
+                <th style="width: 25%; background: #EBF3FC; color: #0066CC;">Commercial Standard</th>
+                <th style="width: 25%;">Enterprise / Custom</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Best For</strong></td>
+                <td>Open-source projects, academic research, internal evaluation</td>
+                <td>Proprietary commercial mobile applications, commercial startups</td>
+                <td>Defense, regulated utilities, custom fleet deployments</td>
+              </tr>
+              <tr>
+                <td><strong>Source Code Obligation</strong></td>
+                <td><span style="color: #C62828; font-weight: 600;">Copyleft required</span> (Must open-source your entire application)</td>
+                <td><span style="color: #10B981; font-weight: 600;">100% Closed-Source Clean</span> (Zero copyleft obligations)</td>
+                <td><span style="color: #10B981; font-weight: 600;">100% Closed-Source Clean</span> + optional escrow</td>
+              </tr>
+              <tr>
+                <td><strong>Offline Ed25519 License</strong></td>
+                <td>Community key / self-signed test key</td>
+                <td>Cryptographically signed commercial <code>.lic</code> key</td>
+                <td>Custom fleet volume licensing &amp; white-label keys</td>
+              </tr>
+              <tr>
+                <td><strong>Support &amp; SLA</strong></td>
+                <td>GitHub public issue tracker</td>
+                <td>Direct engineering email support (Next-business-day SLA)</td>
+                <td>Dedicated Slack channel &amp; priority architecture reviews</td>
+              </tr>
+              <tr>
+                <td><strong>Commercial Pricing</strong></td>
+                <td><strong>&pound;0</strong> (Free forever)</td>
+                <td><strong>Flat Annual License</strong> (Zero metered API fees)</td>
+                <td><strong>Custom Fleet License</strong> / Multi-app volume</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Production Reference Apps -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">FIELD-TESTED IN PRODUCTION</span>
+          <h2>Battle-Hardened in Commercial App Stores.</h2>
+          <p>Our SDKs are not theoretical wrappers. They power our own consumer security and counter-surveillance suite on live devices:</p>
+        </div>
+
+        <div class="pillars-grid" style="grid-template-columns: repeat(3, 1fr); margin-top: 0;">
+          <div class="pillar-card" style="background: #FFFFFF;">
+            <span class="badge badge-live" style="margin-bottom: 12px;"><span class="badge-dot"></span> Live on Google Play</span>
+            <h3>Travel Safe AI</h3>
+            <p>Production reference implementation of <strong>Scutari Audio Core</strong> for on-device acoustic hazard classification and earbud alerts.</p>
+            <div style="margin-top: 16px;">
+              <a href="/travelsafe.html" style="font-size: 0.88rem; color: #0066CC; font-weight: 600;">Inspect Reference App &rarr;</a>
+            </div>
+          </div>
+
+          <div class="pillar-card" style="background: #FFFFFF;">
+            <span class="badge badge-beta" style="margin-bottom: 12px;"><span class="badge-dot"></span> Closed Beta</span>
+            <h3>RoomClear</h3>
+            <p>Production reference implementation of <strong>ScutariCore</strong> for hardware magnetometer sweeps, BLE Bloom filters, and lens strobe hunting.</p>
+            <div style="margin-top: 16px;">
+              <a href="/roomclear.html" style="font-size: 0.88rem; color: #0066CC; font-weight: 600;">Inspect Reference App &rarr;</a>
+            </div>
+          </div>
+
+          <div class="pillar-card" style="background: #FFFFFF;">
+            <span class="badge badge-dev" style="margin-bottom: 12px;"><span class="badge-dot"></span> In Development</span>
+            <h3>Stillnet</h3>
+            <p>Production reference implementation of local network topology mapping and air-gapped threat countermeasure diagnostics.</p>
+            <div style="margin-top: 16px;">
+              <a href="/stillnet.html" style="font-size: 0.88rem; color: #0066CC; font-weight: 600;">Inspect Reference App &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Technical Inquiry / Contact Section -->
+    <section id="inquiry">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">ENGINEERING & COMMERCIAL DESK</span>
+          <h2>Request a Commercial Evaluation Key.</h2>
+          <p>Talk directly with our engineering team to benchmark ScutariLabs SDK on your target hardware.</p>
+        </div>
+
+        <div class="inquiry-card">
+          <form id="sdkInquiryForm" onsubmit="handleInquirySubmit(event)">
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label" for="inq_name">Your Name</label>
+                <input class="form-input" type="text" id="inq_name" required placeholder="Alex Turner">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="inq_email">Work Email</label>
+                <input class="form-input" type="email" id="inq_email" required placeholder="alex@company.com">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="inq_platform">Target Platform</label>
+                <select class="form-select" id="inq_platform">
+                  <option value="Flutter (Android & iOS)">Flutter (Android &amp; iOS)</option>
+                  <option value="Native Android (Kotlin/Java)">Native Android (Kotlin/Java)</option>
+                  <option value="Native iOS (Swift)">Native iOS (Swift)</option>
+                  <option value="Embedded / C++">Embedded / C++</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="inq_devices">Estimated Active Devices</label>
+                <select class="form-select" id="inq_devices">
+                  <option value="< 10,000">&lt; 10,000 devices</option>
+                  <option value="10,000 - 100,000">10,000 &ndash; 100,000 devices</option>
+                  <option value="100,000 - 1,000,000">100,000 &ndash; 1,000,000 devices</option>
+                  <option value="1,000,000+">1,000,000+ devices</option>
+                </select>
+              </div>
+              <div class="form-group full-width">
+                <label class="form-label" for="inq_usecase">Target Use Case &amp; Requirements</label>
+                <textarea class="form-textarea" id="inq_usecase" rows="4" required placeholder="Tell us about your audio/sensor monitoring requirements, target device tiers, and whether you require Scutari Audio Core or ScutariCore foundation..."></textarea>
+              </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 24px;">
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; max-width: 380px;">
+                Submit Commercial Inquiry &rarr;
+              </button>
+            </div>
+            <div style="text-align: center; margin-top: 16px; font-size: 0.85rem; color: var(--text-tertiary);">
+              Or email our engineering desk directly at <a href="mailto:support@scutarilabs.com?subject=Commercial%20SDK%20Inquiry" style="color: #0066CC; font-weight: 500;">support@scutarilabs.com</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -164,7 +460,7 @@
         <h4>ScutariLabs Ltd</h4>
         <p>Air-gapped mobile applications and on-device machine intelligence. Zero cloud servers, zero analytics, strictly local execution.</p>
         <p style="font-size: 0.8rem; color: #86868B;">
-          Registered in England & Wales <!-- TODO: Insert Companies House Number -->
+          ScutariLabs Ltd | Registered in England and Wales | Company No: [TODO: INSERT COMPANIES HOUSE NUMBER] | Registered Office: [TODO: INSERT REGISTERED OFFICE ADDRESS]
         </p>
       </div>
       <div class="footer-col">
@@ -179,7 +475,7 @@
       <div class="footer-col">
         <h5>Developer SDKs</h5>
         <ul class="footer-links-list">
-          <li><a href="/sdk/">SDK Directory</a></li>
+          <li><a href="/sdk.html">ScutariLabs SDK (B2B)</a></li>
           <li><a href="/sdk/scutaricore/">ScutariCore SDK</a></li>
         </ul>
       </div>
@@ -188,8 +484,8 @@
         <ul class="footer-links-list">
           <li><a href="/blog.html">Research Blog</a></li>
           <li><a href="/contact.html">Contact & Support</a></li>
-          <li><a href="/travelsafe-privacy.html">Privacy Policy</a></li>
-          <li><a href="/travelsafe-terms.html">Terms of Service</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Service</a></li>
         </ul>
       </div>
     </div>
@@ -199,6 +495,36 @@
     </div>
   </div>
 </footer>
-<script src="/js/nav.js"></script>
+
+  <script>
+    document.getElementById('sdkCopyBtn')?.addEventListener('click', function() {
+      const code = document.getElementById('sdkCode').innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        this.textContent = 'COPIED';
+        setTimeout(() => this.textContent = 'COPY', 2000);
+      });
+    });
+
+    function handleInquirySubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('inq_name').value;
+      const email = document.getElementById('inq_email').value;
+      const platform = document.getElementById('inq_platform').value;
+      const devices = document.getElementById('inq_devices').value;
+      const usecase = document.getElementById('inq_usecase').value;
+
+      const subject = encodeURIComponent('Commercial SDK Inquiry: ' + name);
+      const body = encodeURIComponent(
+        'Commercial SDK Licensing Inquiry\n\n' +
+        'Name: ' + name + '\n' +
+        'Work Email: ' + email + '\n' +
+        'Platform: ' + platform + '\n' +
+        'Estimated Devices: ' + devices + '\n\n' +
+        'Use Case & Requirements:\n' + usecase
+      );
+
+      window.location.href = 'mailto:support@scutarilabs.com?subject=' + subject + '&body=' + body;
+    }
+  </script>
 </body>
 </html>

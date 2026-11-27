@@ -1,23 +1,19 @@
-import os
+﻿import os
 import markdown
 
-# Create directories if they don't exist
 os.makedirs('blog_content', exist_ok=True)
 os.makedirs('blog', exist_ok=True)
 
-# Read your master template
 with open('blog_template.html', 'r', encoding='utf-8') as f:
     template = f.read()
 
 post_links = []
 
-# Process every markdown file
 for filename in os.listdir('blog_content'):
     if filename.endswith('.md'):
         with open(f'blog_content/{filename}', 'r', encoding='utf-8') as f:
             text = f.read()
 
-        # Parse front matter manually
         parts = text.split('---')
         title = "Untitled"
         date = ""
@@ -32,34 +28,31 @@ for filename in os.listdir('blog_content'):
         else:
             md_content = text
 
-        # Convert markdown to HTML
         html_content = markdown.markdown(md_content)
-
-        # Inject data into template
         final_html = template.replace('{{TITLE}}', title).replace('{{DATE}}', date).replace('{{CONTENT}}', html_content)
 
-        # Save the blog post in the /blog/ folder
         out_name = filename.replace('.md', '.html')
         with open(f'blog/{out_name}', 'w', encoding='utf-8') as f:
             f.write(final_html)
-        
-        # Store data for the index page
+
         post_links.append({'title': title, 'date': date, 'url': f'/blog/{out_name}'})
         print(f"Built: blog/{out_name}")
 
-# Generate the main blog.html directory page
 post_links.sort(key=lambda x: x['date'], reverse=True)
 
-index_html = template.replace('{{TITLE}}', 'ScutariLabs Blog Directory').replace('{{DATE}}', '')
-links_html = "<h2>All Articles</h2><ul>"
+index_html = template.replace('{{TITLE}}', 'Research & Engineering Publications').replace('{{DATE}}', 'All Articles')
+cards_html = '<div style="display: flex; flex-direction: column; gap: 20px; margin-top: 24px;">'
 for post in post_links:
-    links_html += f'<li style="margin-bottom: 15px;"><a href="{post["url"]}" style="font-size: 1.2rem;">{post["title"]}</a><br><span style="color: #A0AAB5;">{post["date"]}</span></li>'
-links_html += "</ul>"
+    cards_html += f'''<a href="{post["url"]}" class="bento-card" style="padding: 24px 28px; text-decoration: none; color: inherit; background: #FFFFFF;">
+      <div style="font-size: 0.85rem; color: #0066CC; font-weight: 600; margin-bottom: 6px;">{post["date"]}</div>
+      <h2 style="font-size: 1.35rem; color: #1D1D1F; margin-bottom: 8px;">{post["title"]}</h2>
+      <div style="color: #6E6E73; font-size: 0.95rem; font-weight: 500;">Read publication &rarr;</div>
+    </a>'''
+cards_html += '</div>'
 
-index_html = index_html.replace('{{CONTENT}}', links_html)
+index_html = index_html.replace('{{CONTENT}}', cards_html)
 
 with open('blog.html', 'w', encoding='utf-8') as f:
     f.write(index_html)
 
-print("Built: blog.html (Index page)")
-print("Done! You can now commit the generated HTML to GitHub.")
+print("Built: blog.html (Apple Card Index page)")

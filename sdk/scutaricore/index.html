@@ -1,23 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ScutariCore SDK | Zero-Cloud Edge AI & RASP Infrastructure</title>
-  <meta name="description" content="Zero-cloud edge AI and RASP infrastructure for Flutter. Hardware profiling, Android ADPF thermal governing, and zero-telemetry security primitives." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScutariCore SDK | Zero-Cloud Edge AI & RASP for Flutter</title>
+  <meta name="description" content="Zero-cloud edge AI and RASP infrastructure for Flutter. Hardware profiling, Android ADPF thermal governing, and zero-telemetry security primitives.">
   <meta property="og:title" content="ScutariCore SDK | ScutariLabs">
   <meta property="og:description" content="Hardware profiling, thermal governor telemetry, and offline sensor security primitives for Flutter and Android.">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
+  <!-- Sticky Glassmorphic Top Navigation -->
   <nav class="site-nav">
   <div class="container nav-wrapper">
     <a href="/" class="brand-link">
-      <svg class="brand-logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <svg class="brand-logo-icon w-6" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
       </svg>
-      SCUTARILABS
+      <span>ScutariLabs</span>
     </a>
     <div class="nav-desktop">
       <ul class="nav-links-list">
@@ -27,141 +28,161 @@
         <li class="nav-item"><a href="/blog.html">Blog</a></li>
       </ul>
       <div class="nav-actions">
-        <a href="mailto:support@scutarilabs.com?subject=Commercial%20Licensing%20Inquiry" class="btn btn-primary btn-sm">Commercial Licensing</a>
+        <a href="mailto:support@scutarilabs.com?subject=Commercial%20Licensing%20Inquiry" class="btn btn-secondary btn-sm">Commercial Licensing</a>
       </div>
     </div>
+    <button class="mobile-toggle" aria-label="Toggle navigation" type="button">
+      <svg class="w-6" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu-drawer">
+    <ul class="mobile-menu-list">
+      <li><a href="/#apps">Apps</a></li>
+      <li><a href="/sdk/">SDKs</a></li>
+      <li><a href="/#architecture">Architecture</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+    </ul>
+    <a href="mailto:support@scutarilabs.com?subject=Commercial%20Licensing%20Inquiry" class="btn btn-secondary" style="width: 100%; text-align: center;">Commercial Licensing</a>
   </div>
 </nav>
 
   <main>
-    
     <section>
-      <div class="container grid-2" style="align-items: center;">
+      <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
         <div>
-          <a href="/sdk/" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent); margin-bottom: 12px; display: inline-block;">&larr; ALL SDKS</a>
-          <div class="badge badge-live" style="margin-bottom: 16px;"><span class="badge-pulse"></span> v1.0 PRODUCTION-READY</div>
-          <h1>Zero-Cloud Edge AI & RASP Infrastructure for Flutter.</h1>
-          <p style="font-size: 1.1rem; margin-bottom: 24px;">
+          <a href="/sdk/" style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 500; color: #0066CC; margin-bottom: 16px;">
+            &larr; All SDKs
+          </a>
+          <div class="badge badge-live" style="margin-bottom: 20px;">
+            <span class="badge-dot"></span>
+            v1.0 Production-Ready
+          </div>
+          <h1 style="font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 20px; line-height: 1.1;">
+            Zero-Cloud Edge AI & RASP Infrastructure for Flutter.
+          </h1>
+          <p style="font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 32px;">
             Prevent OOM crashes, govern thermal throttling, and enforce strictly on-device security. Zero telemetry, zero external servers, and offline cryptographic licensing.
           </p>
           <div style="display: flex; gap: 12px; flex-wrap: wrap;">
             <a href="mailto:support@scutarilabs.com?subject=Commercial%20SDK%20Licensing%20Inquiry" class="btn btn-primary">Request Commercial License &rarr;</a>
-            <a href="#dual-licensing" class="btn btn-outline">View Transparent Licensing</a>
+            <a href="#licensing" class="btn btn-outline">View Dual-Licensing</a>
           </div>
         </div>
 
-        <div class="terminal-block">
-          <div class="terminal-header">
-            <div class="terminal-dots">
-              <span class="dot dot-red"></span>
-              <span class="dot dot-yellow"></span>
-              <span class="dot dot-green"></span>
+        <div class="code-card">
+          <div class="code-header">
+            <div class="code-dots">
+              <span class="code-dot"></span>
+              <span class="code-dot"></span>
+              <span class="code-dot"></span>
             </div>
-            <span>scutari_core.dart // 100% Local Execution</span>
-            <button class="copy-btn" id="copyBtn">COPY</button>
+            <span>flutter / scutari_core.dart</span>
+            <button class="copy-btn" id="coreCopyBtn">COPY</button>
           </div>
-          <pre class="code-pre" id="codeBlock"><code>// pubspec.yaml: scutari_core: ^1.0.0
-import 'package:scutari_core/scutari_core.dart';
+          <pre class="code-pre" id="coreCode"><code><span class="cm">// Initialize strictly on-device Flutter engine</span>
+<span class="kw">final</span> profile = <span class="kw">await</span> <span class="fn">ScutariProfiler</span>.inspectDevice();
+<span class="kw">final</span> modelPath = <span class="fn">ScutariProfiler</span>.routeModel(
+  profile: profile,
+  lowTierModelPath: <span class="str">'assets/model_int8.tflite'</span>,
+  highTierModelPath: <span class="str">'assets/model_fp16.tflite'</span>,
+);
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+<span class="kw">await</span> <span class="fn">ScutariVault</span>.setScreenShield(<span class="kw">true</span>);
+<span class="kw">await</span> <span class="fn">ScutariVault</span>.verifyDeviceIntegrity();
 
-  // 1. Hardware Profiling & Adaptive Model Router
-  final profile = await ScutariProfiler.inspectDevice();
-  final modelPath = ScutariProfiler.routeModel(
-    profile: profile,
-    lowTierModelPath: 'assets/model_int8.tflite',
-    highTierModelPath: 'assets/model_fp16.tflite',
-  );
-
-  // 2. Hardware RASP & Screen Shielding
-  await ScutariVault.setScreenShield(true);
-  await ScutariVault.verifyDeviceIntegrity();
-
-  // 3. Android ADPF Thermal Headroom Stream
-  ScutariThermalGovernor.policyStream.listen((policy) {
-    engine.setInferenceThreads(policy.maxInferenceThreads);
-  });
-}</code></pre>
+<span class="fn">ScutariThermalGovernor</span>.policyStream.listen((policy) {
+  engine.setInferenceThreads(policy.maxInferenceThreads);
+});</code></pre>
         </div>
       </div>
     </section>
-    <section style="padding: 40px 0; background: var(--bg-secondary);">
+
+    <!-- Technical Benchmarks Bar -->
+    <section class="section-alt" style="padding: 48px 0;">
       <div class="container">
-        <div class="benchmarks-bar">
-          <div class="benchmark-col">
-            <span class="benchmark-val">&lt; 18ms</span>
-            <div class="benchmark-name">Local Inference Latency</div>
-            <div class="benchmark-desc">On-device acoustic classification on mid-range ARM NPU</div>
+        <div class="benchmarks-strip" style="margin-top: 0;">
+          <div class="bench-col">
+            <div class="bench-num">&lt; 18ms</div>
+            <div class="bench-label">Local Inference Latency</div>
+            <div class="bench-desc">Real-time acoustic classification on mid-range ARM NPU</div>
           </div>
-          <div class="benchmark-col">
-            <span class="benchmark-val">&lt; 1ms</span>
-            <div class="benchmark-name">Offline Key Verification</div>
-            <div class="benchmark-desc">Ed25519 local cryptographic license verification</div>
+          <div class="bench-col">
+            <div class="bench-num">&lt; 4.2MB</div>
+            <div class="bench-label">Binary Footprint</div>
+            <div class="bench-desc">Zero bloat Flutter C++ FFI native bindings</div>
+          </div>
+          <div class="bench-col">
+            <div class="bench-num">&lt; 1ms</div>
+            <div class="bench-label">Offline Key Verification</div>
+            <div class="bench-desc">Cryptographic Ed25519 local signature validation</div>
           </div>
         </div>
       </div>
     </section>
-    
-    <section id="dual-licensing">
+
+    <!-- Transparent Dual-Licensing Table -->
+    <section id="licensing">
       <div class="container">
         <div class="section-header">
-          <span class="section-eyebrow">TRANSPARENT LICENSING</span>
-          <h2>Open Source Evaluation vs. Commercial License</h2>
+          <h2>Transparent Dual-Licensing.</h2>
           <p>Predictable pricing with zero license server phone-home calls verified 100% offline.</p>
         </div>
 
-        <div class="licensing-table-card">
-          <div class="licensing-grid">
-            <div class="licensing-col">
-              <span class="badge badge-dev">OPEN SOURCE / EVALUATION</span>
-              <h3>GPLv3 License</h3>
-              <div class="licensing-price">&pound;0 <span>/ forever</span></div>
-              <p style="font-size: 0.88rem;">Free for non-commercial open-source applications, internal testing, and academic research.</p>
-              <ul class="licensing-list">
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Full access to open-core Dart/Flutter source</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Device Hardware Profiler & Model Router</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Community GitHub issue tracker support</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Copyleft GPLv3 compliance required</li>
-              </ul>
-              <a href="mailto:support@scutarilabs.com?subject=GPLv3%20Evaluation%20Inquiry" class="btn btn-outline">Evaluate Open-Core</a>
-            </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 960px; margin: 0 auto;">
+          <!-- Tier 1: Open Source -->
+          <div class="bento-card" style="box-shadow: var(--shadow-card);">
+            <span class="badge badge-dev" style="margin-bottom: 16px;"><span class="badge-dot"></span> Open Source / Evaluation</span>
+            <h3>GPLv3 License</h3>
+            <div style="font-size: 2.2rem; font-weight: 700; margin: 12px 0 16px; font-family: var(--font-mono);">&pound;0 <span style="font-size: 0.9rem; font-weight: 400; color: var(--text-secondary);">/ forever</span></div>
+            <p class="desc">Free for open-source non-commercial applications, internal testing, and academic evaluation.</p>
+            <ul style="list-style: none; margin: 0 0 32px; padding: 0; display: flex; flex-direction: column; gap: 12px; font-size: 0.9rem; color: var(--text-secondary);">
+              <li style="display: flex; gap: 10px;">&check; Full access to open-core Dart/Flutter source</li>
+              <li style="display: flex; gap: 10px;">&check; Device Hardware Profiler & Model Router</li>
+              <li style="display: flex; gap: 10px;">&check; Community GitHub issue tracker support</li>
+              <li style="display: flex; gap: 10px;">&check; Copyleft GPLv3 compliance required</li>
+            </ul>
+            <a href="mailto:support@scutarilabs.com?subject=GPLv3%20Evaluation%20Inquiry" class="btn btn-outline" style="width: 100%; text-align: center;">Evaluate Open-Core</a>
+          </div>
 
-            <div class="licensing-col featured">
-              <span class="badge badge-live">COMMERCIAL ENTERPRISE</span>
-              <h3>Commercial Royalty-Free</h3>
-              <div class="licensing-price">&pound;349 <span>/ month (or &pound;3,500 / year)</span></div>
-              <p style="font-size: 0.88rem;">Flat fee for proprietary, closed-source commercial Flutter & Android applications.</p>
-              <ul class="licensing-list">
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Android ADPF Thermal & Battery Headroom Governor</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Zero-Telemetry Vault, RASP & Offline PDF Audit Kit</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Zero Copyleft Obligations (Closed-source clean)</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Priority Next-Business-Day Engineering Support SLA</li>
-              </ul>
-              <a href="mailto:support@scutarilabs.com?subject=Commercial%20SDK%20License" class="btn btn-primary">Request Commercial License &rarr;</a>
-            </div>
+          <!-- Tier 2: Commercial -->
+          <div class="bento-card" style="border: 2px solid #0066CC; box-shadow: var(--shadow-hover);">
+            <span class="badge badge-live" style="margin-bottom: 16px;"><span class="badge-dot"></span> Commercial Royalty-Free</span>
+            <h3>Commercial License</h3>
+            <div style="font-size: 2.2rem; font-weight: 700; margin: 12px 0 16px; font-family: var(--font-mono);">&pound;349 <span style="font-size: 0.9rem; font-weight: 400; color: var(--text-secondary);">/ month (or &pound;3,500 / year)</span></div>
+            <p class="desc">Flat fee for proprietary, closed-source commercial Flutter & Android applications.</p>
+            <ul style="list-style: none; margin: 0 0 32px; padding: 0; display: flex; flex-direction: column; gap: 12px; font-size: 0.9rem; color: var(--text-secondary);">
+              <li style="display: flex; gap: 10px;">&check; Android ADPF Thermal & Battery Headroom Governor</li>
+              <li style="display: flex; gap: 10px;">&check; Zero-Telemetry Vault, RASP & Offline PDF Audit Kit</li>
+              <li style="display: flex; gap: 10px;">&check; Zero Copyleft Obligations (Closed-source clean)</li>
+              <li style="display: flex; gap: 10px;">&check; Priority Next-Business-Day Engineering SLA</li>
+            </ul>
+            <a href="mailto:support@scutarilabs.com?subject=Commercial%20SDK%20License" class="btn btn-primary" style="width: 100%; text-align: center;">Request Commercial License &rarr;</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Minimalist 4-Column Apple-Style Footer -->
   <footer class="site-footer">
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <h4>SCUTARILABS LTD</h4>
-        <p>Zero-cloud, strictly on-device mobile security and counter-surveillance tools for high-risk operators and enterprise teams.</p>
-        <p style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent);">
+        <h4>ScutariLabs Ltd</h4>
+        <p>Air-gapped mobile applications and on-device machine intelligence. Zero cloud servers, zero analytics, strictly local execution.</p>
+        <p style="font-size: 0.8rem; color: #86868B;">
           Registered in England & Wales <!-- TODO: Insert Companies House Number -->
         </p>
       </div>
       <div class="footer-col">
-        <h5>Consumer Apps</h5>
+        <h5>Applications</h5>
         <ul class="footer-links-list">
           <li><a href="/travelsafe.html">Travel Safe AI</a></li>
           <li><a href="/roomclear.html">RoomClear</a></li>
           <li><a href="/stillnet.html">Stillnet</a></li>
+          <li><a href="/autoinvoice.html">Offline Auto Invoice</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -174,25 +195,26 @@ void main() async {
       <div class="footer-col">
         <h5>Company & Legal</h5>
         <ul class="footer-links-list">
-          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/blog.html">Research Blog</a></li>
           <li><a href="/contact.html">Contact & Support</a></li>
           <li><a href="/travelsafe-privacy.html">Privacy Policy</a></li>
-          <li><a href="/travelsafe-terms.html">Terms & Compliance</a></li>
+          <li><a href="/travelsafe-terms.html">Terms of Service</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <div>&copy; 2026 ScutariLabs Ltd. All rights reserved. Zero external tracking scripts.</div>
-      <div>Direct Contact: <a href="mailto:support@scutarilabs.com" style="color: var(--accent);">support@scutarilabs.com</a></div>
+      <div>&copy; 2026 ScutariLabs Ltd. Built with Jobs-era restraint and DeepMind precision.</div>
+      <div>Direct Contact: <a href="mailto:support@scutarilabs.com" style="color: #0066CC;">support@scutarilabs.com</a></div>
     </div>
   </div>
 </footer>
+<script src="/js/nav.js"></script>
 
   <script>
-    document.getElementById('copyBtn').addEventListener('click', function() {
-      const code = document.getElementById('codeBlock').innerText;
+    document.getElementById('coreCopyBtn')?.addEventListener('click', function() {
+      const code = document.getElementById('coreCode').innerText;
       navigator.clipboard.writeText(code).then(() => {
-        this.textContent = 'COPIED!';
+        this.textContent = 'COPIED';
         setTimeout(() => this.textContent = 'COPY', 2000);
       });
     });

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,13 +8,14 @@
   <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
+  <!-- Sticky Glassmorphic Top Navigation -->
   <nav class="site-nav">
   <div class="container nav-wrapper">
     <a href="/" class="brand-link">
-      <svg class="brand-logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <svg class="brand-logo-icon w-6" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
       </svg>
-      SCUTARILABS
+      <span>ScutariLabs</span>
     </a>
     <div class="nav-desktop">
       <ul class="nav-links-list">
@@ -24,55 +25,87 @@
         <li class="nav-item"><a href="/blog.html">Blog</a></li>
       </ul>
       <div class="nav-actions">
-        <a href="mailto:support@scutarilabs.com?subject=Commercial%20Licensing%20Inquiry" class="btn btn-primary btn-sm">Commercial Licensing</a>
+        <a href="mailto:support@scutarilabs.com?subject=Commercial%20Licensing%20Inquiry" class="btn btn-secondary btn-sm">Commercial Licensing</a>
       </div>
     </div>
+    <button class="mobile-toggle" aria-label="Toggle navigation" type="button">
+      <svg class="w-6" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu-drawer">
+    <ul class="mobile-menu-list">
+      <li><a href="/#apps">Apps</a></li>
+      <li><a href="/sdk/">SDKs</a></li>
+      <li><a href="/#architecture">Architecture</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+    </ul>
+    <a href="mailto:support@scutarilabs.com?subject=Commercial%20Licensing%20Inquiry" class="btn btn-secondary" style="width: 100%; text-align: center;">Commercial Licensing</a>
   </div>
 </nav>
 
-  <main class="container" style="padding-top: 60px; padding-bottom: 80px; max-width: 860px;">
+  <main class="container" style="padding-top: 64px; padding-bottom: 96px; max-width: 860px;">
     <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 24px;">
       <div>
-        <span class="section-eyebrow">COUNTER-SURVEILLANCE // TACTICAL SWEEP</span>
-        <h1>RoomClear</h1>
+        <div class="hero-pill" style="margin-bottom: 16px;">
+          <span class="hero-pill-dot" style="background-color: #0066CC;"></span>
+          <span>Counter-Surveillance // Tactical Sweep</span>
+        </div>
+        <h1 style="font-size: clamp(2.4rem, 4vw, 3.4rem); margin-bottom: 12px;">RoomClear</h1>
       </div>
-      <span class="badge badge-beta"><span class="badge-pulse"></span> Closed Beta</span>
+      <span class="badge badge-beta"><span class="badge-dot"></span> Closed Beta</span>
     </div>
 
-    <p class="lead" style="margin-bottom: 24px;"><strong>Tactical counter-surveillance and bug-sweeping tool. 100% on-device processing.</strong></p>
-    <p style="margin-bottom: 32px;">
-      Find hidden cameras in your Airbnb or hotel in 60 seconds. RoomClear leverages your smartphone&#39;s native hardware sensors to highlight magnetic, optical, and RF anomalies associated with concealed surveillance devices.
+    <p class="lead" style="font-size: 1.25rem; font-weight: 500; color: var(--text-primary); margin-bottom: 20px;">
+      Tactical counter-surveillance and bug-sweeping tool. 100% on-device processing.
+    </p>
+    <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.7;">
+      Find hidden cameras in your Airbnb or hotel in 60 seconds. RoomClear leverages your smartphone's native hardware sensors to highlight magnetic, optical, and RF anomalies associated with concealed surveillance devices.
     </p>
 
-    <h2 style="margin-bottom: 16px;">Hardware Level Sweeps</h2>
-    <ul class="licensing-list" style="margin-bottom: 40px;">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Tri-Sensor Sweep:</strong> Tap into the native magnetometer, high-contrast IR filters, and a BLE Bloom filter to cross-reference local anomalies against known IoT device signatures.</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Retro-Reflective Strobe:</strong> Active optical lens hunting uses high-frequency LED pulses to highlight the specific light refraction of hidden, offline camera glass.</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span><strong>Edge ML Threat Profiler:</strong> AR bounding boxes automatically spot and highlight high-risk objects like smoke detectors, alarm clocks, and ventilation shafts.</span></li>
-    </ul>
+    <div class="bento-card" style="margin-bottom: 48px; background: var(--bg-secondary);">
+      <h2 style="font-size: 1.5rem; margin-bottom: 20px;">Hardware Level Sweeps</h2>
+      <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; font-size: 1rem; color: var(--text-secondary);">
+        <li style="display: flex; gap: 12px; align-items: flex-start;">
+          <span style="color: #0066CC; font-weight: 700;">&bull;</span>
+          <span><strong>Tri-Sensor Sweep:</strong> Tap into the native magnetometer, high-contrast IR filters, and a BLE Bloom filter to cross-reference local anomalies against known IoT device signatures.</span>
+        </li>
+        <li style="display: flex; gap: 12px; align-items: flex-start;">
+          <span style="color: #0066CC; font-weight: 700;">&bull;</span>
+          <span><strong>Retro-Reflective Strobe:</strong> Active optical lens hunting uses high-frequency LED pulses to highlight the specific light refraction of hidden, offline camera glass.</span>
+        </li>
+        <li style="display: flex; gap: 12px; align-items: flex-start;">
+          <span style="color: #0066CC; font-weight: 700;">&bull;</span>
+          <span><strong>Edge ML Threat Profiler:</strong> AR bounding boxes automatically spot and highlight high-risk objects like smoke detectors, alarm clocks, and ventilation shafts.</span>
+        </li>
+      </ul>
+    </div>
 
-    <div style="padding-top: 24px; border-top: 1px solid var(--border); display: flex; gap: 16px;">
+    <div style="padding-top: 24px; border-top: 1px solid var(--border-hairline); display: flex; gap: 16px;">
       <a href="/roomclear-privacy.html" class="btn btn-outline btn-sm">RoomClear Privacy Policy</a>
       <a href="/roomclear-terms.html" class="btn btn-outline btn-sm">RoomClear Terms & Conditions</a>
     </div>
   </main>
 
+  <!-- Minimalist 4-Column Apple-Style Footer -->
   <footer class="site-footer">
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <h4>SCUTARILABS LTD</h4>
-        <p>Zero-cloud, strictly on-device mobile security and counter-surveillance tools for high-risk operators and enterprise teams.</p>
-        <p style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent);">
+        <h4>ScutariLabs Ltd</h4>
+        <p>Air-gapped mobile applications and on-device machine intelligence. Zero cloud servers, zero analytics, strictly local execution.</p>
+        <p style="font-size: 0.8rem; color: #86868B;">
           Registered in England & Wales <!-- TODO: Insert Companies House Number -->
         </p>
       </div>
       <div class="footer-col">
-        <h5>Consumer Apps</h5>
+        <h5>Applications</h5>
         <ul class="footer-links-list">
           <li><a href="/travelsafe.html">Travel Safe AI</a></li>
           <li><a href="/roomclear.html">RoomClear</a></li>
           <li><a href="/stillnet.html">Stillnet</a></li>
+          <li><a href="/autoinvoice.html">Offline Auto Invoice</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -85,18 +118,19 @@
       <div class="footer-col">
         <h5>Company & Legal</h5>
         <ul class="footer-links-list">
-          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/blog.html">Research Blog</a></li>
           <li><a href="/contact.html">Contact & Support</a></li>
           <li><a href="/travelsafe-privacy.html">Privacy Policy</a></li>
-          <li><a href="/travelsafe-terms.html">Terms & Compliance</a></li>
+          <li><a href="/travelsafe-terms.html">Terms of Service</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <div>&copy; 2026 ScutariLabs Ltd. All rights reserved. Zero external tracking scripts.</div>
-      <div>Direct Contact: <a href="mailto:support@scutarilabs.com" style="color: var(--accent);">support@scutarilabs.com</a></div>
+      <div>&copy; 2026 ScutariLabs Ltd. Built with Jobs-era restraint and DeepMind precision.</div>
+      <div>Direct Contact: <a href="mailto:support@scutarilabs.com" style="color: #0066CC;">support@scutarilabs.com</a></div>
     </div>
   </div>
 </footer>
+<script src="/js/nav.js"></script>
 </body>
 </html>

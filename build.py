@@ -7,6 +7,20 @@ os.makedirs('blog', exist_ok=True)
 with open('blog_template.html', 'r', encoding='utf-8') as f:
     template = f.read()
 
+GPLAY_BUTTON_HTML = """
+<div style="margin: 32px 0;">
+  <a href="https://play.google.com/store/apps/details?id=com.scutarilabs.travelsafeai" target="_blank" rel="noopener noreferrer" aria-label="Get Travel Safe AI on Google Play" style="display: inline-flex; align-items: center; gap: 12px; padding: 10px 24px; background-color: #181818; border-radius: 9999px; text-decoration: none; transition: background-color 0.2s ease;" onmouseover="this.style.backgroundColor='#2a2a2a'" onmouseout="this.style.backgroundColor='#181818'">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff" style="display: block; flex-shrink: 0;">
+      <path d="M6 4l15 8-15 8V4z"/>
+    </svg>
+    <span style="display: flex; flex-direction: column; text-align: left; line-height: 1.1;">
+      <span style="font-size: 11px; color: #cccccc; letter-spacing: 0.05em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-transform: uppercase;">GET IT ON</span>
+      <span style="font-size: 19px; color: #ffffff; font-weight: 700; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.15;">Google Play</span>
+    </span>
+  </a>
+</div>
+"""
+
 post_links = []
 
 for filename in os.listdir('blog_content'):
@@ -29,7 +43,7 @@ for filename in os.listdir('blog_content'):
             md_content = text
 
         html_content = markdown.markdown(md_content)
-        final_html = template.replace('{{TITLE}}', title).replace('{{DATE}}', date).replace('{{CONTENT}}', html_content)
+        final_html = template.replace('{{TITLE}}', title).replace('{{DATE}}', date).replace('{{CONTENT}}', html_content + GPLAY_BUTTON_HTML)
 
         out_name = filename.replace('.md', '.html')
         with open(f'blog/{out_name}', 'w', encoding='utf-8') as f:
